@@ -1,0 +1,26 @@
+@import 'tailwindcss';
+@import './typography.css';
+@import './navigation.css';
+
+html,
+body {
+	@apply m-0 w-full h-full;
+}
+
+body {
+	@apply overflow-x-hidden text-base;
+}
+
+section {
+	@apply relative py-10 lg:py-20;
+}
+
+.container {
+	@apply max-w-full w-full px-6 mx-auto;
+}
+
+header {
+	a {
+		@apply text-sm;
+	}
+}
