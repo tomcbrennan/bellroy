@@ -1,8 +1,13 @@
-# Component Task for Bellroy.com
+# Component Task for Bellroy
 ### By Tom Brennan 😃
 ---
 
 URL: https://bellroy-tom-brennan.netlify.app/
+
+---
+## Features
+- **Live Search UI** - New user-friendly UI for live search functionality
+- **Header Redesign** - Minor redesign of the header navigation
 
 ---
 ## Tech Stack

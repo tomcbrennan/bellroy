@@ -78,6 +78,7 @@ import Search from './Search.astro'
 				document.body.classList.remove('search-active')
 				removeResults()
 				removeListeners()
+				document.body.style.overflowY = 'visible'
 			}
 		}
 
@@ -85,6 +86,7 @@ import Search from './Search.astro'
 			document.body.classList.remove('search-active')
 			removeResults()
 			removeListeners()
+			document.body.style.overflowY = 'visible'
 		}
 
 		const removeListeners = () => {
@@ -103,6 +105,7 @@ import Search from './Search.astro'
 					mainElement.addEventListener('click', handleMainClick)
 				} else {
 					removeResults()
+					document.body.style.overflowY = 'visible'
 				}
 			})
 		})
