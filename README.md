@@ -8,6 +8,7 @@ URL: https://bellroy-tom-brennan.netlify.app/
 ## Features
 - **Live Search UI** - New user-friendly UI for live search functionality
 - **Header Redesign** - Minor redesign of the header navigation
+- **Feedback on UI Elements** - Improved hover states and larger areas of interaction
 
 ---
 ## Tech Stack
