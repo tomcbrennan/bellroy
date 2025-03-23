@@ -36,6 +36,10 @@ body {
         .close-search {
             @apply absolute top-full right-8 bg-[#e15a1d] py-2 px-4 cursor-pointer rounded-b-sm text-white text-xs duration-100 hover:brightness-90;
         }
+
+        .search-card {
+            @apply p-4 bg-[#F7F7F7] flex flex-col gap-4 text-sm cursor-pointer duration-150 hover:brightness-95;
+        }
 	}
 
 	&.search-active {
