@@ -24,3 +24,7 @@ header {
 		@apply text-sm;
 	}
 }
+
+.button {
+	@apply bg-[#e15a1d] py-2 px-4 cursor-pointer rounded-sm text-white duration-100 hover:brightness-90;
+}

@@ -1,9 +1,9 @@
 ---
 import SearchCard from './SearchCard.astro'
 
-const response = await fetch('https://dummyjson.com/products?limit=10');
-const data = await response.json();
-const products = data.products || [];
+const response = await fetch('https://dummyjson.com/products?limit=10')
+const data = await response.json()
+const products = data.products || []
 ---
 
 <div data-search-overlay class="search-overlay">
@@ -40,9 +40,9 @@ const products = data.products || [];
 					class="grid grid-flow-dense gap-1 initial:py-1 grid-cols-2 sm:grid-cols-[repeat(auto-fill,minmax(250px,1fr))] initial:sm:px-1 lg:grid-cols-[repeat(auto-fill,minmax(285px,1fr))] supports-[container-type]:sm:grid-cols-2 supports-[container-type]:sm:@[640px]:grid-cols-[repeat(auto-fill,minmax(250px,1fr))] supports-[container-type]:lg:@[1024px]:grid-cols-[repeat(auto-fill,minmax(285px,1fr))]">
 					{products.map((product) => <SearchCard product={product} />)}
 				</div>
-                <div class="flex items-center justify-center w-full">
-                    <a href="#" class="underline text-sm">View all products</a>
-                </div>
+				<div class="flex items-center justify-center w-full">
+					<a href="#" class="underline text-sm">View all products</a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -61,23 +61,17 @@ const products = data.products || [];
 		if (!searchInput || !resultsModal) return
 
 		searchInput.addEventListener('input', (e) => {
-			setTimeout(() => {
-				if (e.target.value.length > 0) {
-                    document.body.style.overflow = 'hidden'
+			if (e.target.value.length > 0) {
+				setTimeout(() => {
+					document.body.style.overflow = 'hidden'
 					gsap.to(resultsModal, {
 						duration: 0.2,
 						ease: 'power2.out',
 						autoAlpha: 1,
 						delay: 0.2,
 					})
-				} else {
-					gsap.to(resultsModal, {
-						duration: 0.2,
-						ease: 'power2.in',
-						autoAlpha: 0,
-					})
-				}
-			}, 200)
+				}, 200)
+			}
 		})
 	}
 	document.addEventListener('DOMContentLoaded', initSearchResults)
